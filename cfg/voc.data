@@ -1,0 +1,6 @@
+classes= 20
+train  = /home/peter/worksapce/datasets/VOC/train.txt
+valid  = /home/peter/worksapce/datasets/VOC/2007_test.txt
+names = data/voc.names
+backup = backup
+
