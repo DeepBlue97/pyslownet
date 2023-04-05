@@ -36,6 +36,26 @@ class Relu:
         return dx
 
 
+class LeakyRelu:
+    def __init__(self):
+        self.mask = None
+
+        self.leaky_w = .1
+
+    def forward(self, x):
+        self.mask = (x <= 0)
+        out = x.copy()
+        out[self.mask] = self.leaky_w * out[self.mask]
+
+        return out
+
+    def backward(self, dout):
+        dout[self.mask] = self.leaky_w  # 小于0的地方梯度为0.1，其它地方原样输出
+        dx = dout
+
+        return dx
+
+
 class Softmax:
     def __init__(self):
         self.y = None
