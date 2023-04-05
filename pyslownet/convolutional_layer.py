@@ -1,4 +1,7 @@
 
+import numpy as np
+
+
 class ConvolutionalLayer:
     def __init__(self, in_channel: int, out_channel: int, kernel_size: int,
         padding: int, stride: int
@@ -8,6 +11,8 @@ class ConvolutionalLayer:
         self.kernel_size = kernel_size
         self.padding = padding
         self.stride = stride
+
+        self.weights = 
 
     def forward():
         pass
