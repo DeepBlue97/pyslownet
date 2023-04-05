@@ -1,0 +1,2 @@
+class ConnectedLayer:
+    pass
